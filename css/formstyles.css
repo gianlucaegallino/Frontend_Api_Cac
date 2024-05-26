@@ -1,0 +1,229 @@
+/* --------------------------------- FONTS --------------------------------- */
+
+@font-face {
+  font-family: Nunito;
+  src: url(../media/fonts/NunitoLightRegular.woff2);
+}
+
+@font-face {
+  font-family: NunitoItalic;
+  src: url(../media/fonts/NunitoLightItalic.woff2);
+}
+
+/* --------------------------------- VARIABLES COLOR --------------------------------- */
+:root {
+  --RojoApagado: #9f3647;
+  --CasiNegro: #181419;
+  --NegroGrisaceo: #2a2a2a;
+  --Gris: #333333;
+  --GrisClaro: #787878;
+}
+
+/* --------------------------------- SCROLL --------------------------------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--CasiNegro);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--RojoApagado);
+}
+
+/* --------------------------------- GENERAL SELECTORS --------------------------------- */
+
+body {
+  background-image: url(../media/img/bg-register.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: Nunito;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+header,
+main {
+  background-color: rgba(32, 32, 32, 0.459);
+  width: 100vw;
+}
+
+header {
+  height: 8vh;
+}
+
+main {
+  height: calc(100vh - 8vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+form {
+  gap: 1.25rem;
+  color: #fafafa;
+  padding: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 30vw;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+/* ---------------------------------- CLASS STYLES --------------------------------- */
+
+.form-check-label {
+  font-size: 0.8rem;
+}
+
+.helpLink {
+  color: var(--GrisClaro);
+  text-align: left;
+}
+
+.formbutton,
+.formbutton:hover {
+  background-color: var(--RojoApagado);
+  height: 3.5rem;
+  border: none;
+  border-radius: 5px;
+  width: 95%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  background-color: var(--NegroGrisaceo);
+  width: 30vw;
+  height: 90vh;
+  border-radius: 5px;
+}
+
+.Logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.2rem;
+  color: white;
+  padding: 1.6rem;
+  font-weight: 700;
+  gap: 0.3rem;
+}
+
+.IconoPelicula {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.input,
+.input:focus {
+  background-color: #333333;
+  border: 2px solid var(--RojoApagado);
+  border-radius: 30px;
+  width: 100%;
+  height: 40px;
+  color: #fafafa;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  font-size: 1.25rem;
+  box-shadow: 0px 0px 0px black;
+}
+
+.input::placeholder {
+  color: var(--GrisClaro);
+}
+
+/*-------------------------- GENERAL USE Y RESPONSIVE STYLES ----------------------------*/
+
+/* SVG FILTER Black -> White para el titulo y los svg de movieInfo*/
+
+.WhiteSvgFilter {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(149deg) brightness(113%) contrast(96%);
+}
+
+/*Media Query*/
+
+@media screen and (max-width: 1200px) {
+  .tituloForm {
+    font-size: 2rem;
+  }
+  form {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .input,
+  .input:focus {
+    width: 83%;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .content {
+    width: 95%;
+    padding: 10px 10px;
+  }
+  .formbutton,
+  .formbutton:hover {
+    width: 77.5%;
+    height: auto;
+    padding: 0.8rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  .helpLink {
+    color: var(--GrisClaro);
+    text-align: left;
+    font-size: 0.8rem;
+    padding-top: 1rem;
+  }
+  .form-check {
+    width: 83%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-content: center;
+    align-items: center;
+  }
+
+  .SendBtnContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-check > input,
+  .form-check > label {
+    font-size: 0.8rem;
+  }
+  .Logo > span {
+    font-size: 1rem;
+  }
+  .Logo > img {
+    height: 1rem;
+    width: 1rem;
+  }
+}

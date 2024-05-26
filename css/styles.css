@@ -1,0 +1,734 @@
+/* --------------------------------- FONTS --------------------------------- */
+
+@font-face {
+  font-family: Nunito;
+  src: url(../media/fonts/NunitoLightRegular.woff2);
+}
+
+@font-face {
+  font-family: NunitoItalic;
+  src: url(../media/fonts/NunitoLightItalic.woff2);
+}
+
+/* --------------------------------- VARIABLES COLOR --------------------------------- */
+:root {
+  --RojoApagado: #9f3647;
+  --CasiNegro: #181419;
+  --NegroGrisaceo: #2a2a2a;
+  --Gris: #333333;
+  --GrisClaro: #787878;
+}
+
+/* --------------------------------- SCROLL --------------------------------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--CasiNegro);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--RojoApagado);
+}
+
+/* --------------------------------- GENERAL SELECTORS --------------------------------- */
+
+body {
+  background-color: var(--CasiNegro);
+  font-family: Nunito;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--RojoApagado);
+  color: white;
+  height: 10vh;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: var(--RojoApagado);
+  height: 15vh;
+  gap: 0px;
+}
+
+hr {
+  width: 80vw;
+  border-style: none;
+  border-top: 2px solid var(--RojoApagado);
+  opacity: 1;
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  gap: 20px;
+  margin: 0px;
+}
+table {
+  width: 100%;
+}
+td {
+  font-size: 1.2rem;
+  padding: 10px 0px;
+}
+th {
+  padding-left: 45%;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+/* --------------------------------- SHARED STYLES --------------------------------- */
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+
+.headerButtonContainer {
+  padding: 0px 24px;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  gap: 2.75rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.Logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700;
+  gap: 0.3rem;
+}
+
+.Logo:hover {
+  animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+.IconoPelicula {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.GoToTop {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.5rem;
+}
+
+.redBTN,
+.redBTN2 {
+  background-color: var(--RojoApagado);
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  border-radius: 5px;
+}
+
+.blackBTN {
+  padding: 0.4rem 1rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: var(--CasiNegro);
+  font-weight: 700;
+}
+
+.redBTN:hover,
+.blackBTN:hover {
+  box-shadow: 0rem 0rem 0.5rem #852d3b;
+  background-color: var(--RojoApagado);
+}
+
+.noEffectRedBtn,
+.noEffectRedBtn:hover,
+.noEffectRedBtn:active {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  background-color: var(--RojoApagado) !important;
+  border: none;
+}
+
+.noEffectBlackBtn,
+.noEffectBlackBtn:hover,
+.noEffectBlackBtn:active {
+  background-color: var(--CasiNegro) !important;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* --------------------------------- INDEX STYLES --------------------------------- */
+.hero {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-image: url(../media/img/banner-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  width: calc(100vw - 10px);
+}
+
+.herocontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.fondoTransparente {
+  background-color: #0000008f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: calc(100vw - 10px);
+  height: 90vh;
+}
+
+.redBTN2 {
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
+
+.tituloXL,
+.tituloprinc {
+  text-align: center;
+  margin-top: 0%;
+  margin-bottom: 1rem;
+}
+
+.tituloXL {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  width: calc(100vw - 10px);
+}
+
+.tituloprinc {
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.titulo {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.busqueda {
+  padding-top: 9.5rem;
+  padding-bottom: 9rem;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-top: 2rem;
+}
+
+.searchbar {
+  background-color: white;
+  border: 0px solid black;
+  border-radius: 25px;
+  color: #000000;
+  font-size: 1.2rem;
+  height: 50px;
+  margin: 20px 0px;
+  outline: none;
+  padding: 0px 20px;
+  width: 500px;
+}
+.searchBtn {
+  height: 50px;
+  margin: 20px 10px;
+  padding: 0 20px;
+  border-radius: 25px;
+  background-color: var(--RojoApagado);
+  font-weight: 700;
+  color: white;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pelicula {
+  position: relative;
+}
+
+.nombreInvisible {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  top: 0%;
+  left: 0%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  color: rgb(255, 255, 255);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.peliculasFlex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  width: 80vw;
+}
+
+.nextBackButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.AntSigBtn {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--RojoApagado);
+  margin-top: 60px;
+  margin-bottom: 60px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.peliculasSlider {
+  display: grid;
+  grid-template: repeat(1, auto) / repeat(1, auto);
+  grid-auto-flow: column;
+  gap: 2.5rem;
+  overflow: auto;
+  width: 80vw;
+  padding-left: 40px;
+  padding-bottom: 2.5rem;
+}
+
+.pIMG {
+  height: 300px;
+  width: 200px;
+  border-radius: 10px;
+  scale: 1;
+  transition: all 0.5s;
+}
+
+.pIMGsmall {
+  border-radius: 10px;
+  height: 242.25px;
+  width: 161.5px;
+}
+
+.movieTitle {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1rem;
+  padding: 0px 10px;
+}
+
+.movieAclamadas {
+  margin-bottom: 3.5rem;
+}
+
+.pelicula:hover .nombreInvisible {
+  scale: 0.9;
+  transition: all 0.5s;
+  box-shadow: var(--RojoApagado) 0rem 0rem 2rem;
+  opacity: 1;
+}
+
+.pelicula:hover .pIMG {
+  scale: 0.9;
+  transition: all 0.5s;
+  opacity: 1;
+}
+
+.AntSigBtn:hover,
+.redBTN2:hover {
+  scale: 0.925;
+  box-shadow: 0rem 0rem 0.5rem #b3b3b3;
+  transition: 0.5s all;
+}
+
+/* --------------------------------- INFO STYLES --------------------------------- */
+
+.infoSection {
+  display: flex;
+  color: white;
+  background-image: url(../media/img/mario-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  width: calc(100vw - 10px);
+}
+
+.pIMGbig {
+  border-radius: 20px;
+  height: 450px;
+  width: auto;
+  align-self: start;
+  justify-self: end;
+}
+
+.movieInfoText {
+  width: 57vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 450px;
+}
+
+.movieCredits {
+  margin: 0px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.fondotransparente2 {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 60px;
+  padding-top: 50px;
+  color: white;
+  background-color: #6b6b6ba1;
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  width: calc(100vw - 10px);
+}
+
+.extrasSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100vw - 10px);
+  padding: 0px 12vw;
+  margin-top: 10rem;
+  margin-bottom: 6rem;
+}
+
+.budgetSubSection {
+  display: flex;
+  flex-direction: column;
+  color: #fafafa;
+  width: 26rem;
+  flex-shrink: 0;
+}
+
+.netLinks {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.rowtitle {
+  font-weight: 700;
+}
+
+.movieHeading > h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0px;
+}
+.movieOverview > h2,
+.trailerSubSection > h2 {
+  font-size: 1.5rem;
+  margin: 0px;
+  color: white;
+}
+
+.credit > p {
+  margin: 0px;
+}
+.credit > h3 {
+  font-size: 1.17rem;
+  margin: 0px;
+}
+
+/*-------------------------- GENERAL USE Y RESPONSIVE STYLES ----------------------------*/
+
+/* SVG FILTER Black -> White para el titulo y los svg de movieInfo*/
+
+.WhiteSvgFilter {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(149deg) brightness(113%) contrast(96%);
+}
+
+/*Header Media Query*/
+@media screen and (max-width: 768px) {
+  .headerButtonContainer > a {
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0.2rem;
+  }
+  .headerButtonContainer {
+    padding: 0px;
+    gap: 20px;
+  }
+  .sticky {
+    position: sticky;
+    height: initial;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 1.5rem;
+    padding-bottom: calc(1.5rem - 7.5px);
+    width: calc(100vw-10px);
+  }
+}
+
+/*Footer Media Query*/
+@media screen and (max-width: 768px) {
+  footer {
+    height: initial;
+    flex-direction: column;
+    padding-bottom: 10px;
+    width: calc(100vw-10px);
+  }
+
+  .noEffectBlackBtn,
+  .noEffectRedBtn {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .noEffectRedBtn {
+    padding: 0px;
+  }
+  .noEffectBlackBtn {
+    margin-top: 0px;
+  }
+}
+
+/* Index main media query*/
+@media screen and (max-width: 768px) {
+  .hero,
+  .fondoTransparente {
+    height: 60vh;
+  }
+  .tituloXL {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .tituloprinc {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  .redBTN2 {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  h2.titulo {
+    font-size: 1.6rem;
+  }
+  h3.titulo {
+    font-size: 2rem;
+  }
+  .searchbar {
+    font-size: 1rem;
+    height: 40px;
+    width: 300px;
+  }
+  .searchBtn {
+    height: 40px;
+    padding: 0 15px;
+    font-size: 1rem;
+  }
+  .busqueda {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .peliculasFlex {
+    display: flex;
+    gap: 60px;
+    width: 80vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pelicula,
+  .nombreInvisible,
+  .pIMG {
+    width: auto;
+    height: 500px;
+  }
+
+  .nombreInvisible {
+    width: 100%;
+  }
+
+  .AntSigBtn {
+    font-size: 0.8rem;
+  }
+
+  .pIMGsmall {
+    height: 200px;
+    width: auto;
+  }
+}
+
+/* Info main media query */
+@media screen and (max-width: 1200px) {
+  .infoSection,
+  .fondotransparente2 {
+    height: initial;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .pIMGbig {
+    height: 300px;
+    width: auto;
+    align-self: center;
+  }
+  .movieHeading > h1 {
+    font-size: 1.5rem;
+  }
+  .movieOverview > h2 {
+    font-size: 1rem;
+  }
+  .movieInfoText {
+    flex-direction: column;
+    width: 75vw;
+  }
+  .movieCredits {
+    flex-direction: column;
+  }
+  .extrasSection {
+    flex-direction: column;
+    gap: 20px;
+    width: 95vw;
+    padding: 50px 0px;
+    margin: 0px;
+  }
+  .trailerSubSection {
+    width: 100%;
+  }
+  .trailerSubSection > h2 {
+    margin-bottom: 20px;
+  }
+  .trailer {
+    height: 300px;
+    width: 100%;
+  }
+  .budgetSubSection,
+  .netLinks {
+    width: 100%;
+  }
+  .netLinks {
+    justify-content: space-between;
+    gap: calc(calc(100vw - calc(40px * 4)) / 4);
+  }
+  .netLinks > li {
+    width: 50px;
+    justify-content: center;
+    justify-self: center;
+  }
+  td,
+  th {
+    font-size: 1rem;
+  }
+}
+/*Animations*/
+
+/*Fuente: https://unused-css.com/blog/css-shake-animation/*/
+@keyframes tilt-n-move-shaking {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5px, 5px) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  75% {
+    transform: translate(-5px, 5px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
