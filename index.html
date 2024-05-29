@@ -49,7 +49,7 @@
     <hr />
     <div id="movieTrending" data-aos="fade-up" data-aos-offset="300" data-aos-duration="1000">
       <h3 class="titulo">Las tendencias de hoy</h3>
-      <div class="peliculasFlex">
+      <div class="peliculasFlex" id="trendingFlex">
         <div class="pelicula">
           <a href="./html/movieInfo.html"><img src="./media/img/movieCovers/DunePart2.jpg" alt="Dune2" class="pIMG" />
             <div class="nombreInvisible">
@@ -198,7 +198,7 @@
         </div>
       </div>
       <div class="nextBackButtonContainer">
-        <button class="AntSigBtn">Anterior</button><button class="AntSigBtn">Siguiente</button>
+        <button class="AntSigBtn" id="btnAnterior">Anterior</button><button class="AntSigBtn" id="btnSiguiente">Siguiente</button>
       </div>
     </div>
     <hr />
@@ -239,7 +239,7 @@
           <img src="./media/img/movieCovers/YourName.jpg" alt="YourName" class="pIMGsmall" />
         </div>
         <div class="peliculaSm">
-          <img src="../media/img/movieCovers/PulpFiction.jpg" alt="PulpFiction" class="pIMGsmall" />
+          <img src="./media/img/movieCovers/PulpFiction.jpg" alt="PulpFiction" class="pIMGsmall" />
         </div>
         <div class="peliculaSm">
           <img src="./media/img/movieCovers/LOTR.jpg" alt="LOTR" class="pIMGsmall" />
@@ -288,6 +288,8 @@
   <script>
     AOS.init();
   </script>
+  <!--Script peliculas-->
+  <script defer src="./scripts.js"></script>
 </body>
 
 </html>
